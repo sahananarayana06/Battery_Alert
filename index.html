@@ -6,4 +6,21 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-
+    
+<body>
+<div class="background-animation"></div>
+<div class="battery-display">
+    <div class="battery-circle">
+        <svg class="battery-svg" viewBox="0 0 100 100">
+            <defs>
+                <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4facfe"/>
+                    <stop offset="100%" stop-color="#667eea"/>
+                </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="45" class="battery-bg"/>
+            <circle cx="50" cy="50" r="40" class="battery-fill" id="battery-circle"/>
+            <text x="50" y="55" text-anchor="middle" class="battery-text" id="battery-percentage">--%</text>
+        </svg>
+    </div>
+</div>
