@@ -24,3 +24,32 @@
         </svg>
     </div>
 </div>
+
+<div class="container">
+    <h1>🔋 Battery Alert</h1>
+
+    <p id="battery-status">Battery Level: --%</p>
+
+    <label for="level">Set Alert Level (%)</label>
+    <div class="input-group">
+        <input type="number" id="level" min="1" max="100" placeholder="e.g. 20">
+        <button id="add-alert" class="add-btn">+ Add</button>
+    </div>
+
+    <label for="alarm-sound">Alarm Sound (used when adding an alert)</label>
+    <div class="input-group">
+        <select id="alarm-sound" class="alarm-selector">
+            <option value="beep">🔔 Classic Beep</option>
+            <option value="ring">📞 Phone Ring</option>
+            <option value="alarm">⏰ Alarm Clock</option>
+            <option value="chime">🎵 Chime</option>
+            <option value="siren">🚨 Siren</option>
+        </select>
+        <button id="play-sound" class="play-btn">▶ Play</button>
+    </div>
+
+    <div id="alarms-list" class="alarms-list"></div>
+
+    <p id="message"></p>
+</div>
+
