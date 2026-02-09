@@ -6,3 +6,7 @@ const message = document.getElementById("message");
 const alarmsList = document.getElementById("alarms-list");
 const batteryCircle = document.getElementById("battery-circle");
 const batteryPercentage = document.getElementById("battery-percentage");
+
+const alarmSounds = {
+    beep: document.getElementById("alarm-beep")
+};
