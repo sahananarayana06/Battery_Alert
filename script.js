@@ -8,5 +8,7 @@ const batteryCircle = document.getElementById("battery-circle");
 const batteryPercentage = document.getElementById("battery-percentage");
 
 const alarmSounds = {
-    beep: document.getElementById("alarm-beep")
+    beep: document.getElementById("alarm-beep"),
+    ring: document.getElementById("alarm-ring"),
+    alarm: document.getElementById("alarm-alarm")
 };
