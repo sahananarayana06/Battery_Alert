@@ -10,5 +10,7 @@ const batteryPercentage = document.getElementById("battery-percentage");
 const alarmSounds = {
     beep: document.getElementById("alarm-beep"),
     ring: document.getElementById("alarm-ring"),
-    alarm: document.getElementById("alarm-alarm")
+    alarm: document.getElementById("alarm-alarm"),
+    chime: document.getElementById("alarm-chime"),
+    siren: document.getElementById("alarm-siren")
 };
