@@ -14,3 +14,9 @@ const alarmSounds = {
     chime: document.getElementById("alarm-chime"),
     siren: document.getElementById("alarm-siren")
 };
+
+function stopAllSounds() {
+    Object.values(alarmSounds).forEach(a => {
+        try { a.pause(); a.currentTime = 0; } catch (e) {}
+    });
+}
