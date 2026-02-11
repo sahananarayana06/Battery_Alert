@@ -70,6 +70,15 @@ body {
     stroke-width: 2; 
 }
 
+.battery-fill { 
+    fill: none; 
+    stroke: url(#batteryGradient); 
+    stroke-width: 8; 
+    stroke-linecap: round; 
+    stroke-dasharray: 251; 
+    stroke-dashoffset: 251; 
+    transition: stroke-dashoffset 0.5s ease, stroke 0.3s ease; 
+}
 
 
 
