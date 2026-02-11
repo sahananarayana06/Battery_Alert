@@ -64,6 +64,13 @@ body {
     height: 100%; 
 }
 
+.battery-bg { 
+    fill: none; 
+    stroke: rgba(255,255,255,0.12); 
+    stroke-width: 2; 
+}
+
+
 
 
 
