@@ -108,3 +108,17 @@ input {
     border: none; 
 }
 
+.alarm-selector { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 8px; 
+    border: none; 
+    background: #111; 
+    color: #fff; 
+    font-size: 14px; 
+    font-weight: 500; 
+    cursor: pointer; 
+}
+
+
