@@ -156,5 +156,15 @@ button:hover {
     background: linear-gradient(90deg,#7c3aed,#6d28d9); 
 }
 
+.play-btn { 
+    padding: 10px 12px; 
+    margin: 0; 
+    background: linear-gradient(90deg,#7c3aed,#6d28d9); 
+    border: none; 
+    color: #fff; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 700; 
+}
 
 
