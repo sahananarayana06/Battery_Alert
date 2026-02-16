@@ -146,5 +146,15 @@ button:hover {
     color: #eae6ff; 
 }
 
+.input-group { 
+    display:flex; 
+    gap:8px; 
+    align-items:center; 
+}
+
+.add-btn { 
+    background: linear-gradient(90deg,#7c3aed,#6d28d9); 
+}
+
 
 
