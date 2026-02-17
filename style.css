@@ -193,3 +193,7 @@ button:hover {
     color:#fff; 
 }
 
+.alarm-sound-label { 
+    font-size:12px; 
+    color:#ddd; 
+}
