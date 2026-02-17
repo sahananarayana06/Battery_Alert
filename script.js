@@ -1,4 +1,4 @@
-let alarms = []; // { level: number, sound: string }
+ let alarms = []; // { level: number, sound: string }
 let alertedLevels = new Set();
 
 const statusText = document.getElementById("battery-status");
@@ -19,4 +19,14 @@ function stopAllSounds() {
     Object.values(alarmSounds).forEach(a => {
         try { a.pause(); a.currentTime = 0; } catch (e) {}
     });
+}
+
+function playSoundByKey(key) {
+    stopAllSounds();
+    const a = alarmSounds[key];
+    if (!a) return;
+    a.currentTime = 0;
+    a.play().catch(e => console.log('play failed', e));
+    // animate doll when any sound plays
+    animateDoll();
 }
