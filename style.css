@@ -187,3 +187,9 @@ button:hover {
     border-left:4px solid  #8c45ff;
 }
 
+.alarm-level { 
+    font-weight:700; 
+    font-size:15px; 
+    color:#fff; 
+}
+
