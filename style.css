@@ -205,3 +205,7 @@ button:hover {
     padding:6px 8px; 
     border-radius:6px; 
 }
+
+.remove-btn:hover { 
+    background: rgba(255,255,255,0.03); 
+}
