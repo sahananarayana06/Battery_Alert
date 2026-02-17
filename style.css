@@ -176,3 +176,14 @@ button:hover {
     text-align: left; 
 }
 
+.alarm-item { 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    background: rgba(255,255,255,0.02); 
+    padding:10px 12px; 
+    margin:8px 0; 
+    border-radius:8px; 
+    border-left:4px solid  #8c45ff;
+}
+
