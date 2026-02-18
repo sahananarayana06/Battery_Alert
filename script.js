@@ -30,3 +30,11 @@ function playSoundByKey(key) {
     // animate doll when any sound plays
     animateDoll();
 }
+ 
+function playPreview() {
+    const sel = document.getElementById('alarm-sound').value;
+    playSoundByKey(sel);
+    message.textContent = `▶ Playing preview: ${sel}`;
+    setTimeout(() => { message.textContent = ''; }, 1500);
+}
+   
