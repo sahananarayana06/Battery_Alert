@@ -218,3 +218,10 @@ button:hover {
     border:1px solid rgba(255,255,255,0.03); 
     margin-right:8px; 
 }
+
+.no-alarms { 
+    color: #bbb; 
+    text-align:center; 
+    margin:10px 0; 
+    font-style:italic; 
+}
