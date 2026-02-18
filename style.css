@@ -209,3 +209,12 @@ button:hover {
 .remove-btn:hover { 
     background: rgba(255,255,255,0.03); 
 }
+
+.small { 
+    padding:6px 10px; 
+    border-radius:6px; 
+    background: rgba(255,255,255,0.02); 
+    color:#fff; 
+    border:1px solid rgba(255,255,255,0.03); 
+    margin-right:8px; 
+}
