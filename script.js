@@ -37,4 +37,22 @@ function playPreview() {
     message.textContent = `▶ Playing preview: ${sel}`;
     setTimeout(() => { message.textContent = ''; }, 1500);
 }
-   
+ 
+function addAlert() {
+    const levelInput = document.getElementById('level').value;
+    const level = parseInt(levelInput);
+    const sound = document.getElementById('alarm-sound').value;
+    if (isNaN(level) || level < 1 || level > 100) {
+        message.textContent = '❌ Please enter a valid battery percentage.';
+        return;
+    }
+    if (alarms.some(a => a.level === level)) {
+        message.textContent = `⚠️ Alert for ${level}% already exists.`;
+        return;
+    }
+    alarms.push({ level, sound });
+    alarms.sort((a,b)=>b.level-a.level);
+    document.getElementById('level').value = '';
+    message.textContent = `✅ Alert added for ${level}% (${sound})`;
+    renderAlarms();
+}  
