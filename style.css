@@ -225,3 +225,16 @@ button:hover {
     margin:10px 0; 
     font-style:italic; 
 }
+
+/* doll animation */
+.doll {
+    position: fixed;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    font-size: 44px;
+    z-index: 20;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6)); 
+    pointer-events: none;
+}
