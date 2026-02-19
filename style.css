@@ -238,3 +238,7 @@ button:hover {
     filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6)); 
     pointer-events: none;
 }
+
+.doll.jump {
+    animation: jump 800ms cubic-bezier(.25,.8,.25,1);
+}
