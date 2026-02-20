@@ -243,3 +243,18 @@ button:hover {
 .doll.jump {
     animation: jump 800ms cubic-bezier(.25,.8,.25,1);
 }
+
+@keyframes jump {
+    0% { 
+        transform: translateX(-50%) translateY(0) rotate(0deg); 
+    }
+    30% { 
+        transform: translateX(-50%) translateY(-120px) rotate(-12deg); 
+    }
+    60% { 
+        transform: translateX(-50%) translateY(8px) rotate(8deg); 
+    }
+    100% { 
+        transform: translateX(-50%) translateY(0) rotate(0deg); 
+    }
+}
