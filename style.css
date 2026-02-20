@@ -258,3 +258,16 @@ button:hover {
         transform: translateX(-50%) translateY(0) rotate(0deg); 
     }
 }
+
+.doll::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 40px;
+    height: 8px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    filter: blur(2px);
+}
