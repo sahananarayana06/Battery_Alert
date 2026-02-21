@@ -56,3 +56,10 @@ function addAlert() {
     message.textContent = `✅ Alert added for ${level}% (${sound})`;
     renderAlarms();
 }  
+
+function removeAlert(level) {
+    alarms = alarms.filter(a => a.level !== level);
+    alertedLevels.delete(level);
+    renderAlarms();
+    message.textContent = `🗑️ Alert for ${level}% removed`;
+}
