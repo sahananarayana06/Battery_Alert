@@ -63,3 +63,9 @@ function removeAlert(level) {
     renderAlarms();
     message.textContent = `🗑️ Alert for ${level}% removed`;
 }
+
+function playAlarmFor(alarmObj) {
+    playSoundByKey(alarmObj.sound);
+    // doll jump for real alarm
+    animateDoll();
+}
