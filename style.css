@@ -290,3 +290,22 @@ button:hover {
 .doll.jump::before {
     animation: popGlow 800ms cubic-bezier(.25,.8,.25,1);
 }
+
+@keyframes popGlow {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-50%) scale(0.2); 
+    }
+    25% { 
+        opacity: 1; 
+        transform: translateX(-50%) scale(1.05); 
+    }
+    60% { 
+        opacity: 0.6; 
+        transform: translateX(-50%) scale(0.9); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-50%) scale(1.2); 
+    }
+}
