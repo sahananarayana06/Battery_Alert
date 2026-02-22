@@ -69,3 +69,14 @@ function playAlarmFor(alarmObj) {
     // doll jump for real alarm
     animateDoll();
 }
+
+function animateDoll() {
+    const doll = document.getElementById('doll');
+    if (!doll) return;
+    doll.classList.remove('jump');
+    // force reflow to restart animation
+    void doll.offsetWidth;
+    doll.classList.add('jump');
+    // remove class after animation ends
+    setTimeout(() => { doll.classList.remove('jump'); }, 900);
+}
