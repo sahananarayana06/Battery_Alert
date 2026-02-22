@@ -94,3 +94,19 @@ function renderAlarms() {
         alarmsList.innerHTML = "<p class='no-alarms'>No alarms set</p>";
         return;
     }
+alarms.forEach(a => {
+        const div = document.createElement('div');
+        div.className = 'alarm-item';
+        div.innerHTML = `
+            <div>
+                <span class='alarm-level'>${a.level}%</span>
+                <div class='alarm-sound-label'>${a.sound}</div>
+            </div>
+            <div class='alarm-actions'>
+                <button class='small' onclick="(function(){ window.playSoundByKey && window.playSoundByKey('${a.sound}') })()">▶</button>
+                <button class='remove-btn' onclick="(function(){ window.removeAlert && window.removeAlert(${a.level}) })()">✕</button>
+            </div>
+        `;
+        alarmsList.appendChild(div);
+    });
+}
