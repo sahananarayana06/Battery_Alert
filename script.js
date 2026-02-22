@@ -80,3 +80,17 @@ function animateDoll() {
     // remove class after animation ends
     setTimeout(() => { doll.classList.remove('jump'); }, 900);
 }
+
+function renderAlarms() {
+    alarmsList.innerHTML = '';
+    if (alarms.length === 0) {
+        alarmsList.innerHTML = "<p class='no-alarms'>No alarms set</p>";
+        return;
+    }
+    
+function renderAlarms() {
+    alarmsList.innerHTML = '';
+    if (alarms.length === 0) {
+        alarmsList.innerHTML = "<p class='no-alarms'>No alarms set</p>";
+        return;
+    }
