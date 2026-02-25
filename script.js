@@ -144,3 +144,5 @@ navigator.getBattery().then(function(battery){
     updateBatteryInfo();
     battery.addEventListener('levelchange', updateBatteryInfo);
 });
+
+if ('Notification' in window) Notification.requestPermission();
