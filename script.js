@@ -1,4 +1,4 @@
-let alarms = []; // { level: number, sound: string }
+        let alarms = []; // { level: number, sound: string }
 let alertedLevels = new Set();
 
 const statusText = document.getElementById("battery-status");
@@ -110,3 +110,5 @@ alarms.forEach(a => {
         alarmsList.appendChild(div);
     });
 }
+window.playSoundByKey = playSoundByKey;
+window.removeAlert = removeAlert;
