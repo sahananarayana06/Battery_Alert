@@ -1,4 +1,4 @@
-        let alarms = []; // { level: number, sound: string }
+e        let alarms = []; // { level: number, sound: string }
 let alertedLevels = new Set();
 
 const statusText = document.getElementById("battery-status");
@@ -112,3 +112,35 @@ alarms.forEach(a => {
 }
 window.playSoundByKey = playSoundByKey;
 window.removeAlert = removeAlert;
+
+navigator.getBattery().then(function(battery){
+    function updateBatteryInfo(){
+        const level = Math.round(battery.level * 100);
+        statusText.textContent = `Battery Level: ${level}%`;
+        if (batteryPercentage) batteryPercentage.textContent = level + '%';
+        if (batteryCircle) {
+            const circumference = 2 * Math.PI * 40; // r=40
+            const offset = circumference - (level / 100) * circumference;
+            batteryCircle.style.strokeDasharray = `${circumference}`;
+            batteryCircle.style.strokeDashoffset = offset;
+            let color = '#a78bfa';
+            if (level <= 20) color = '#4c1d95'; else if (level <=50) color = '#7c3aed';
+            batteryCircle.style.stroke = color;
+        }
+
+        alarms.forEach(al => {
+            if (level <= al.level && !alertedLevels.has(al.level)) {
+                playAlarmFor(al);
+                alertedLevels.add(al.level);
+                if (Notification.permission === 'granted') {
+                    new Notification('🔋 Battery Alert', { body: `Battery level is ${level}%` });
+                }
+            }
+            if (level > al.level && alertedLevels.has(al.level)) {
+                alertedLevels.delete(al.level);
+            }
+        });
+    }
+    updateBatteryInfo();
+    battery.addEventListener('levelchange', updateBatteryInfo);
+});
