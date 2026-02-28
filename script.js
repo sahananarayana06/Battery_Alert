@@ -16,6 +16,7 @@ const alarmSounds = {
     siren: document.getElementById("alarm-siren")
 };
 
+//Stop all sound before playing new one.
 function stopAllSounds() {
     Object.values(alarmSounds).forEach(a => {
         try { a.pause(); a.currentTime = 0; } catch (e) {}
