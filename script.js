@@ -7,7 +7,7 @@ const alarmsList = document.getElementById("alarms-list");
 const batteryCircle = document.getElementById("battery-circle");
 const batteryPercentage = document.getElementById("battery-percentage");
 
-// Store all alarm sounds.
+// Store all alarm sounds
 const alarmSounds = {
     beep: document.getElementById("alarm-beep"),
     ring: document.getElementById("alarm-ring"),
@@ -16,13 +16,14 @@ const alarmSounds = {
     siren: document.getElementById("alarm-siren")
 };
 
-//Stop all sound before playing new one.
+//Stop all sound before playing new one
 function stopAllSounds() {
     Object.values(alarmSounds).forEach(a => {
         try { a.pause(); a.currentTime = 0; } catch (e) {}
     });
 }
 
+// Play selected sound using key
 function playSoundByKey(key) {
     stopAllSounds();
     const a = alarmSounds[key];
