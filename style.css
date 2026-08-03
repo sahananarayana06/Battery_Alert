@@ -1,0 +1,310 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(124,58,237,0.12) 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(167,139,250,0.06) 0%, transparent 30%),
+        linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+    animation: gradientShift 18s ease infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0%,100% { 
+        transform: translate(0,0); 
+    }
+    25% { 
+        transform: translate(-40px,-20px); 
+    }
+    50% { 
+        transform: translate(40px,20px); 
+    }
+    75% { 
+        transform: translate(-20px,40px); 
+    }
+}
+
+.battery-display {
+    position: fixed;
+    top: 28px;
+    right: 28px;
+    z-index: 10;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(6px);
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid  #8c45ff;
+    box-shadow: 0 0 40px rgba(140,69,255,0.5);
+}
+
+.battery-circle { 
+    width: 92px; 
+    height: 92px; 
+}
+
+.battery-svg { 
+    width: 100%; 
+    height: 100%; 
+}
+
+.battery-bg { 
+    fill: none; 
+    stroke: rgba(255,255,255,0.12); 
+    stroke-width: 2; 
+}
+
+.battery-fill { 
+    fill: none; 
+    stroke: url(#batteryGradient); 
+    stroke-width: 8; 
+    stroke-linecap: round; 
+    stroke-dasharray: 251; 
+    stroke-dashoffset: 251; 
+    transition: stroke-dashoffset 0.5s ease, stroke 0.3s ease; 
+}
+
+.battery-text { 
+    font-size: 20px; 
+    font-weight: 700; 
+    fill: #ffffff; 
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6); 
+}
+
+.container {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    padding: 34px 26px;
+    border-radius: 16px;
+    text-align: center;
+    width: 360px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    border: 1px solid  #8c45ff;
+    z-index: 5;
+    position: relative;
+    box-shadow: 0 0 40px rgba(140,69,255,0.5);
+}
+
+input { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 8px; 
+    border: none; 
+}
+
+.alarm-selector { 
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 8px; 
+    border: none; 
+    background: #111; 
+    color: #fff; 
+    font-size: 14px; 
+    font-weight: 500; 
+    cursor: pointer; 
+}
+
+.alarm-selector:hover { 
+    background: #1a1a1a;
+}
+
+button { 
+    padding: 10px 18px; 
+    border: none; 
+    border-radius: 10px; 
+    background: linear-gradient(90deg, #8c45ff,#7c3aed); 
+    color: #fff; 
+    font-weight: 700; 
+    cursor: pointer; 
+}
+
+button:hover { 
+    transform: translateY(-2px); 
+    filter: brightness(1.05); 
+}
+
+#message { 
+    margin-top: 12px; 
+    font-weight: 700; 
+    color: #eae6ff; 
+}
+
+.input-group { 
+    display:flex; 
+    gap:8px; 
+    align-items:center; 
+}
+
+.add-btn { 
+    background: linear-gradient(90deg,#7c3aed,#6d28d9); 
+}
+
+.play-btn { 
+    padding: 10px 12px; 
+    margin: 0; 
+    background: linear-gradient(90deg,#7c3aed,#6d28d9); 
+    border: none; 
+    color: #fff; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 700; 
+}
+
+.play-btn:hover { 
+    transform: translateY(-1px); 
+}
+
+.alarms-list { 
+    margin: 18px 0; 
+    text-align: left; 
+}
+
+.alarm-item { 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    background: rgba(255,255,255,0.02); 
+    padding:10px 12px; 
+    margin:8px 0; 
+    border-radius:8px; 
+    border-left:4px solid  #8c45ff;
+}
+
+.alarm-level { 
+    font-weight:700; 
+    font-size:15px; 
+    color:#fff; 
+}
+
+.alarm-sound-label { 
+    font-size:12px; 
+    color:#ddd; 
+}
+
+.remove-btn { 
+    background: transparent;
+    color:#fff; 
+    border:1px solid rgba(255,255,255,0.06); 
+    padding:6px 8px; 
+    border-radius:6px; 
+}
+
+.remove-btn:hover { 
+    background: rgba(255,255,255,0.03); 
+}
+
+.small { 
+    padding:6px 10px; 
+    border-radius:6px; 
+    background: rgba(255,255,255,0.02); 
+    color:#fff; 
+    border:1px solid rgba(255,255,255,0.03); 
+    margin-right:8px; 
+}
+
+.no-alarms { 
+    color: #bbb; 
+    text-align:center; 
+    margin:10px 0; 
+    font-style:italic; 
+}
+
+/* doll animation */
+.doll {
+    position: fixed;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    font-size: 44px;
+    z-index: 20;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6)); 
+    pointer-events: none;
+}
+
+.doll.jump {
+    animation: jump 800ms cubic-bezier(.25,.8,.25,1);
+}
+
+@keyframes jump {
+    0% { 
+        transform: translateX(-50%) translateY(0) rotate(0deg); 
+    }
+    30% { 
+        transform: translateX(-50%) translateY(-120px) rotate(-12deg); 
+    }
+    60% { 
+        transform: translateX(-50%) translateY(8px) rotate(8deg); 
+    }
+    100% { 
+        transform: translateX(-50%) translateY(0) rotate(0deg); 
+    }
+}
+
+.doll::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 40px;
+    height: 8px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.doll::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(0.2);
+    bottom: -10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(circle at 35% 35%, rgba(124, 58, 237, 1) 0%, rgba(167, 139, 250, 1) 40%, rgba(255,255,255,0.06) 60%, transparent 70%);
+    filter: blur(6px);
+}
+
+.doll.jump::before {
+    animation: popGlow 800ms cubic-bezier(.25,.8,.25,1);
+}
+
+@keyframes popGlow {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-50%) scale(0.2); 
+    }
+    25% { 
+        opacity: 1; 
+        transform: translateX(-50%) scale(1.05); 
+    }
+    60% { 
+        opacity: 0.6; 
+        transform: translateX(-50%) scale(0.9); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-50%) scale(1.2); 
+    }
+}
