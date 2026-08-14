@@ -3,7 +3,7 @@
 ---
 
 ## Project Descriptions
-The Battery Alert System is a simple software/hardware-based project that notifies th req e user when the battery level falls below a specified minimum percentage. 
+The Battery Alert System is a simple software/hardware-based project that notifies the user when the battery level falls below a specified minimum percentage. 
 This helps prevent sudden shutdowns and protects devices from deep discharge.
 
 ---
